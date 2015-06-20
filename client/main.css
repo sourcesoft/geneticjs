@@ -1,0 +1,65 @@
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+main div.row div.col.section-row {
+  margin: 10px 0;
+  padding: 20px 0;
+}
+
+.input-field {
+  margin-top: 0;
+}
+nav {
+  margin: 12px 0;
+}
+.color-span {
+  margin: 2px;
+  width: 36px;
+  height: 36px;
+  float: left;
+  text-shadow: 1px 1px 2px #FFF;
+  padding: 8px;
+}
+.color-wrapper {
+  clear: both;
+  float: none;
+  display: flex;
+}
+.genetic .input-field.col {
+  margin-top: 26px;
+}
+.genetic table.hoverable tbody tr:hover {
+  background-color: #f2f2f2;
+  padding: 3px;
+  border: 2px solid #FFF;
+}
+.fitness-col {
+  background-color: rgb(211, 103, 103);
+  border-radius: 5px;
+}
+
+main nav {
+  margin: 0;
+}
+main nav.nav-color-helper {
+  background-color: #78909c;
+}
+div.app-name {
+  margin-left: 80px;
+}
+div.section-tip {
+  color: #000000;
+}
+
+input.matrix_cell.input-field {
+  width: 30px;
+  height: 20px;
+}

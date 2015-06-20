@@ -1,0 +1,144 @@
+<head>
+  <title>genetic-js</title>
+</head>
+
+<body>
+
+<main>
+  <div class="navbar-fixed">
+    <nav class="nav-color-helper">
+      <div class="nav-wrapper">
+        <div class="app-name left">رنگ آمیزی گراف با الگوریتم ژنتیک</div>
+
+        <ul id="slide-out" class="side-nav right">
+          <div class="section-tip">
+            حتما مراحل را به ترتیب پر کرده و ادامه دهید
+          </div>
+          <li><a href="#section-1">مرحله اول</a></li>
+          <li><a href="#section-2">مرحله دوم</a></li>
+          <li><a href="#section-3">مرحله سوم</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="right button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+
+      </div>
+
+    </nav>
+  </div>
+
+
+  <div class="row">
+    <div id="section-1" class="row">
+      <div class="section-row white-text center brown lighten-1 col s12">
+        مرحله اول: ورود اطلاعات گراف
+      </div>
+    </div>
+    <div class="col s12 m6 l6">
+      {{> section1}}
+    </div>
+
+    <div class="col s12 m6 l6">
+      <div class="row">
+        <div class="graph"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div id="section-2" class="row">
+      <div class="section-row white-text center brown lighten-1 col s12">
+        مرحله دوم: تولید جمعیت اولیه
+      </div>
+    </div>
+    <div class="row genetic">
+      {{> section2 }}
+    </div>
+
+  </div>
+
+
+
+  <div class="row">
+
+    <div id="section-3" class="row">
+      <div class="section-row white-text center brown lighten-1 col s12">
+        مرحله سوم: ترکیب
+      </div>
+    </div>
+    <div class="row genetic">
+      {{> section3 }}
+    </div>
+
+  </div>
+
+
+</main>
+</body>
+
+
+<!-- TEMPLATE: SECTION 1 -->
+<template name="section1">
+
+
+  <div class="row">
+    <button class="waves-effect waves-light btn gen-graph">بروزرسانی شکل</button>
+    <button class="waves-effect waves-light btn" id="get">بروزرسانی ماتریکس ورودی</button>
+    <br/>
+    <br/>
+    <div class="row">
+      <div class="input-field col s12">
+        <input value="8" class="validate input-field dimen" id="row" type="number"/>
+        <label for="email">تعداد رئوس</label>
+      </div>
+    </div>
+    <form id="frm"></form>
+  </div>
+</template>
+
+<!-- TEMPLATE: SECTION 2 -->
+<template name="section2">
+  <div class="input-field col s12">
+    <input placeholder="مقدار پیشفرض تعداد رئوس: {{dimensions}}" class="validate input-field colorNum" size="3" id="colorNum" type="number"/>
+    <label class="center-align" for="email">حداکثر تعداد رنگهایی که در الگوریتم استفاده میشود. پیشفرض تعداد رئوس است.</label>
+  </div>
+  <div class="input-field col s12">
+    <input placeholder="مقدار پیشفرض ۷ برابر تعداد رئوس: {{chroms}}" class="validate input-field colorNum" size="3" id="chromNum" type="number"/>
+    <label class="center-align" for="email">تعداد کروموزم ها در جمعیت اولیه</label>
+  </div>
+  <ul class="color-wrapper">
+    {{#each colors}}
+      <li>
+        <span class="color-span" style="background-color: {{color}}">{{id}}</span>
+      </li>
+    {{/each}}
+  </ul>
+  <button class="waves-effect waves-light amber darken-3 btn" id="first-pop">تولید جمعیت اولیه</button>
+  <br/>
+  <br/>
+  <div class="row">
+    {{>section2table}}
+  </div>
+</template>
+
+
+<!-- TEMPLATE: SECTION 2 table -->
+<template name="section2table">
+  <table class="bordered centered striped hoverable">
+    <thead>
+    <tr>
+      {{{tableOutput.headers}}}
+    </tr>
+    </thead>
+
+    <tbody>
+    {{{tableOutput.matrixOutput}}}
+    </tbody>
+  </table>
+</template>
+
+
+<!-- TEMPLATE: SECTION 3 -->
+<template name="section3">
+
+</template>
+
