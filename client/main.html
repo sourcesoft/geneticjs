@@ -114,6 +114,7 @@
   </ul>
   <button class="waves-effect waves-light amber darken-3 btn" id="first-pop">تولید جمعیت اولیه</button>
   <br/>
+  <div class="center row">عدد کمتر به معنی پیدا کردن نود های همجوار یکرنگ به تعداد کمتر است. بنابراین عدد کمتر نتیجه بهتری دارد</div>
   <br/>
   <div class="row">
     {{>section2table}}
@@ -139,6 +140,43 @@
 
 <!-- TEMPLATE: SECTION 3 -->
 <template name="section3">
-
+  <button class="waves-effect waves-light amber darken-3 btn" id="tarkib">ترکیب</button>
+  <br/>
+  <br/>
+  <div class="row">
+    {{>section3table}}
+  </div>
 </template>
 
+<!-- TEMPLATE: SECTION 3 table -->
+<template name="section3table">
+  <div class="center row">انتخاب دو کروموزوم</div>
+    <!--{{tableOutput.one}} و {{tableOutput.two}}</div>-->
+  <table class="bordered centered striped hoverable">
+    <tbody>
+    {{{tableOutput.first}}}
+    </tbody>
+  </table>
+  <br/>
+  <br/>
+  <div class="row center">ترکیب</div>
+  <table class="bordered centered striped hoverable">
+    <tbody>
+    {{{tableOutput.second}}}
+    </tbody>
+  </table>
+
+  <div class="row center">جمعیت جدید</div>
+  <table class="bordered centered striped hoverable">
+    <thead>
+    <tr>
+      {{{tableOutputAll.headers}}}
+    </tr>
+    </thead>
+
+    <tbody>
+      {{{tableOutputAll.matrixOutput}}}
+    </tbody>
+  </table>
+
+</template>
