@@ -1,4 +1,4 @@
-This small app is a fast short notice of college final project and is not even complete yet.
+This small app is a fast short notice of college final project and is not even complete yet. This was not an attemp to write the best functional-testable code, but experimenting Genetic Algorithm.
 
 # geneticjs
 Coloring Graphs using Genetic Algorithm built on top of [Meteor framework](http://meteor.com)
