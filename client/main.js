@@ -1,10 +1,5 @@
 Meteor.startup(function () {
 
-  // Setting defaults
-  //Session.set('colorArray', []);
-  //Session.set('dimensions', '8');
-  //Session.set('chroms', '56'); // dim * 7
-
   var rows = 8;
   helperFunctions.drawInput(rows);
   helperFunctions.prepGraph();
